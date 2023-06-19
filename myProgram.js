@@ -27,10 +27,13 @@ function readAndParseCSV(filePath, callback) {
       console.error(error);
       return;
     }
+    console.log("Check inital data length");
     console.log(data.length);
+    console.log("Get unique BaseQuestion");
     const unique = [...new Set(data.map(item => item.BaseQuestion))];
     console.log(unique);
     console.log(unique.length);
+    console.log('Pop out "smalltalk"');
     const lastItem = unique.pop();
     console.log(unique);
     console.log(unique.length);

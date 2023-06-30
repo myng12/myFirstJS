@@ -1,42 +1,26 @@
-const fs = require('fs');
-const csv = require('csv-parser');
+import { readFile } from './common/helpers/CSVHelpers.js';
+import { getUniqueValues, removeValue } from './common/helpers/IOHelpers.js';
+import { createJSONTemplate, saveJSONToFile } from './common/utils/JSONUtils.js';
 
-console.log("Hello! Let read a CSV file");
+async function main() {
+  try {
+    //read CSV file and get unique BaseQuestion(the first column)
+    const csvFilePath = './data/LauraFAQDataTest.csv';
+    const firstColumnValues = await readFile(csvFilePath);
+    const uniqueValues = await getUniqueValues(firstColumnValues);
 
+    //Remove smalltalk
+    const valueToRemove = 'smalltalk';
+    const updatedValues = await removeValue(uniqueValues, valueToRemove);
+    console.log('Updated values:', updatedValues);
 
-const filePath = 'data/LauraFAQDataTest.csv';
-
-function readAndParseCSV(filePath, callback) {
-    const results = [];
-  
-    fs.createReadStream(filePath)
-      .pipe(csv())
-      .on('data', (data) => {
-        results.push(data);
-      })
-      .on('end', () => {
-        callback(null, results);
-      })
-      .on('error', (error) => {
-        callback(error, null);
-      });
+    //create JSON file
+    const jsonData = await createJSONTemplate(updatedValues);
+    const jSONFilePath = './result.JSON';
+    await saveJSONToFile(jsonData, jSONFilePath);
+  } catch (error) {
+    console.error('Error:', error);
   }
+}
 
-  readAndParseCSV(filePath, (error, data) => {
-    if (error) {
-      console.error(error);
-      return;
-    }
-    console.log("Check inital data length");
-    console.log(data.length);
-    console.log("Get unique BaseQuestion");
-    const unique = [...new Set(data.map(item => item.BaseQuestion))];
-    console.log(unique);
-    console.log(unique.length);
-    console.log('Pop out "smalltalk"');
-    const lastItem = unique.pop();
-    console.log(unique);
-    console.log(unique.length);
-    console.log(lastItem);
-  });
-  
+main();

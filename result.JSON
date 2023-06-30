@@ -1,0 +1,110 @@
+[
+  {
+    "id": "REQ_000",
+    "request": "REQUEST",
+    "name": "REQ_000",
+    "question": "BaseQuestion"
+  },
+  {
+    "id": "REQ_001",
+    "request": "REQUEST",
+    "name": "REQ_001",
+    "question": "What is the purpose of Athenka project?"
+  },
+  {
+    "id": "REQ_002",
+    "request": "REQUEST",
+    "name": "REQ_002",
+    "question": "How i can use Athenka in my web application?"
+  },
+  {
+    "id": "REQ_003",
+    "request": "REQUEST",
+    "name": "REQ_003",
+    "question": "Why i can't create chatbot with my website url?"
+  },
+  {
+    "id": "REQ_004",
+    "request": "REQUEST",
+    "name": "REQ_004",
+    "question": "Why my chat bot doesn't have any knowledge data?"
+  },
+  {
+    "id": "REQ_005",
+    "request": "REQUEST",
+    "name": "REQ_005",
+    "question": "Can i create chatbot with vietnamese?"
+  },
+  {
+    "id": "REQ_006",
+    "request": "REQUEST",
+    "name": "REQ_006",
+    "question": "How i can integrate Athenka with my website?"
+  },
+  {
+    "id": "REQ_007",
+    "request": "REQUEST",
+    "name": "REQ_007",
+    "question": "How i can integrate Athenka with my facebook fanpage?"
+  },
+  {
+    "id": "REQ_008",
+    "request": "REQUEST",
+    "name": "REQ_008",
+    "question": "why my chatbot can't reply my question?"
+  },
+  {
+    "id": "REQ_009",
+    "request": "REQUEST",
+    "name": "REQ_009",
+    "question": "how i can change my chatbot personality message?"
+  },
+  {
+    "id": "REQ_0010",
+    "request": "REQUEST",
+    "name": "REQ_0010",
+    "question": "Can i add knowledge data via csv/excel file?"
+  },
+  {
+    "id": "REQ_0011",
+    "request": "REQUEST",
+    "name": "REQ_0011",
+    "question": "How i can stop my chatbot auto reply and use live chat with my customer?"
+  },
+  {
+    "id": "REQ_0012",
+    "request": "REQUEST",
+    "name": "REQ_0012",
+    "question": "How i can add unanswer question to my chatbot in conversation history?"
+  },
+  {
+    "id": "REQ_0013",
+    "request": "REQUEST",
+    "name": "REQ_0013",
+    "question": "How i can delete conversation history of my chatbot?"
+  },
+  {
+    "id": "REQ_0014",
+    "request": "REQUEST",
+    "name": "REQ_0014",
+    "question": "How i can archive conversation history of Athenka?"
+  },
+  {
+    "id": "REQ_0015",
+    "request": "REQUEST",
+    "name": "REQ_0015",
+    "question": "How i can add new faq url to my bot?"
+  },
+  {
+    "id": "REQ_0016",
+    "request": "REQUEST",
+    "name": "REQ_0016",
+    "question": "How i can change my account password in Athenka in case i forgot password?"
+  },
+  {
+    "id": "REQ_0017",
+    "request": "REQUEST",
+    "name": "REQ_0017",
+    "question": "How i can stop chatbot auto reply and use live chat with my customer?"
+  }
+]

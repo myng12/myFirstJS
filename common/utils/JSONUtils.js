@@ -19,7 +19,7 @@ async function createJSONTemplate(array) {
 
 async function saveJSONToFile(jsonData, filePath) {
   try {
-    //Delete existing file
+    // Delete existing file
     await fs.promises.unlink(filePath); 
     
     const jsonString = JSON.stringify(jsonData, null, 2);

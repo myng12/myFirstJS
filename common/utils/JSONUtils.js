@@ -3,7 +3,7 @@ import * as fs from 'node:fs';
 async function createJSONTemplate(array) {
   try {
     const jsonData = array.map((value, index) => {
-      var order = index + 1;
+      const order = index + 1;
       const id = 'REQ_00' + order;
       const request = 'REQUEST';
       const name = 'REQ_00' + order;

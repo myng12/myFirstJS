@@ -8,7 +8,6 @@ async function main() {
     const csvFilePath = './data/LauraFAQDataTest.csv';
     const question = 'BaseQuestion';
     const firstColumnValues = await readFile(csvFilePath, question);
-    // console.log(firstColumnValues);
     const uniqueValues = await getUniqueValues(firstColumnValues);
 
     // Remove smalltalk

@@ -19,7 +19,9 @@ async function readFile(filePath, keyword) {
       const columns = rows[i].split(',');
       if (columns.length > keywordIndex) {
         const value = columns[keywordIndex].trim();
+        if (value !== ''){
         columnData.push(value);
+        }
       }
     }
 
